@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МТИ Екатеринбург — духовное образование для христиан</title>
+
+  <meta name="description" content="Московский теологический институт в Екатеринбурге предлагает духовное образование для христиан, желающих изучать Библию и развивать служение.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph (для соцсетей) -->
+  <meta property="og:title" content="МТИ Екатеринбург — духовное образование для христиан">
+  <meta property="og:description" content="Московский теологический институт в Екатеринбурге предлагает духовное образование для христиан, желающих изучать Библию и развивать служение.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mtiekb.ru/"> <!-- замени на реальный URL сайта -->
+  <meta property="og:image" content="img/og_preview.jpg">
+  <meta property="og:image:alt" content="Московский теологический институт, Екатеринбург">
+  
+  <!-- Twitter Card (если нужно) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="МТИ Екатеринбург — духовное образование для христиан">
+  <meta name="twitter:description" content="Московский теологический институт в Екатеринбурге предлагает духовное образование для христиан, желающих изучать Библию и развивать служение.">
+  <meta name="twitter:image" content="img/og_preview.jpg">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+    body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+    background: url('img/textured_background_3.jpg') no-repeat center bottom fixed;
+    background-size: cover;
+    }
+
+    /* Для мобильных */
+    @media (max-width: 768px) {
+    body {
+    background: url('img/textured_background_3_mobile.jpg') repeat center center;
+    background-size: contain;       
+    background-attachment: scroll; 
+    }
+    }
+
+
+    header {
+      background: radial-gradient(ellipse at top left, #0b5ed7 0%, #003f9e 60%, #001e4d 100%);
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      border-bottom-left-radius: 20%;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #fff, #a8c9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #e5eaff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      header { padding: 3rem 1rem 2rem; }
+    }
+
+    .container { max-width: 960px; margin: 2rem auto; padding: 1rem; }
+
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 { color: #0b5ed7; margin-bottom: 1rem; }
+    ul { padding-left: 1.2rem; }
+    .highlight {
+      background: #e7f1ff;
+      border-left: 5px solid #0b5ed7;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #f9fbff;
+      border-radius: 0.75rem;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .card i { color: #0b5ed7; margin-right: 0.5rem; }
+
+    .accordion-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: #0b5ed7;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    .accordion-toggle .arrow {
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      width: 7px; height: 7px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .accordion-toggle.open .arrow { transform: rotate(-135deg); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+      margin-top: 0.5rem;
+      padding: 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    #founder .accordion-content {
+      flex-direction: row;
+    }
+    .accordion-content.open { max-height: 2000px; padding: 1rem 0 0; }
+
+    .author-photo {
+      flex: 0 0 150px;
+    }
+    .author-photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .author-details { flex: 1; }
+
+    @media (max-width: 600px) {
+       .accordion-content {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: .5rem;
+  }
+      .author-photo { flex: none; margin: 0 auto; }
+      .author-details {
+    width: 100%;
+  }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #fff;
+      padding: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      footer {
+        color: #777;
+      }
+    }
+    footer a { color: #0b5ed7; text-decoration: none; }
+
+    .accordion-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      cursor: zoom-in;
+      margin-bottom: 10px;
+    }
+
+    .lightbox {
+      position: fixed; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.8); display:flex;
+      justify-content:center; align-items:center;
+      opacity:0; visibility:hidden;
+      transition: opacity 0.3s ease; z-index:9999;
+    }
+    .lightbox.active { opacity:1; visibility:visible; }
+    .lightbox img { max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5); }
+    .lightbox-close { position:absolute; top:20px; right:30px; font-size:28px; color:#fff; cursor:pointer; }
+
+
+
+   @media (max-width: 600px) {
+  /* Заголовки и тексты */
+  h1 { font-size: 2rem; }       /* было 2.8rem */
+  h2 { font-size: 1.4rem; }     /* было 1.7rem */
+  p { font-size: 0.9rem; }      /* было 1.2rem */
+  
+  /* Карточки */
+  .card { font-size: 0.9rem; }
+
+  /* Аккордеоны */
+  .accordion-content_founder, 
+  .accordion-content { font-size: 0.9rem; } 
+  .accordion-toggle {
+    font-size: 0.9rem !important; 
+  }  
+  @media (max-width: 600px) {
+  #docs .accordion-content_founder,
+  #docs .accordion-content {
+    font-size: 0.8rem;
+  }
+  #docs .accordion-toggle {
+    font-size: 0.8rem !important;
+  }
+}
+
+  
+  /* Остальные элементы */
+  header { padding: 3rem 1rem 2rem; }
+  .author-details { font-size: 0.9rem; }
+}
+
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>МТИ Екатеринбург</h1>
+    <p>Московский теологический институт предлагает духовное образование для христиан в Екатеринбурге.</p>
+  </header>
+
+  <div class="container">
+    <section data-aos="fade-right">
+      <h2>О программе</h2>
+      <p>Московский теологический институт (РЦ ХВЕ) в Екатеринбурге приглашает на обучение для получения среднего образования. Обучение совмещает дистанционные курсы и очные сессии.</p>
+    </section>
+
+    <section id="founder" class="accordion" data-aos="fade-left">
+      <button class="accordion-toggle">
+        Ректор МТИ
+        <span class="arrow"></span>
+      </button>
+      <div class="accordion-content">
+        <div class="author-photo">
+          <img src="img/S_Yastr.jpg" alt="Сергей Ястржембский">
+        </div>
+        <div class="author-details">
+          <h2>Сергей Ястржембский</h2>
+          <p>— Ректор МТИ. Для нас большая честь служить вам на протяжении более 20 лет. Еще никто за всю историю человечества не был так близок к пришествию Христа, как мы с вами. Это возлагает на нас большую ответственность.</p>
+          <p>Каждый год, каждый день очень важен и ценен. Бог призывает немудрое, немощное, незнатное не для того, чтобы мы оставались такими же. Сегодня, как никогда, Церкви необходимо, продолжая успешно завоевывать социально неблагополучных людей, повернуться лицом к интеллигенции, людям образованным, но также потерянным без Христа.</p>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-right">
+      <h2>Как проходит обучение</h2>
+      <div class="cards">
+        <div class="card"><i class="fa-solid fa-book"></i>Материалы: чтение, видео и тесты</div>
+        <div class="card"><i class="fa-solid fa-users"></i>Очные сессии: раз в квартал (пт–сб)</div>
+        <div class="card"><i class="fa-solid fa-graduation-cap"></i>Срок обучения: 2,5 года</div>
+      </div>
+    </section>
+
+    <section data-aos="fade-left">
+      <h2>Условия поступления</h2>
+      <ul>
+        <li>Аттестат (9 классов)</li>
+        <li>Рекомендация от пастора</li>
+        <li>Заявление (оформляется на первой сессии)</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-right">
+      <h2>Стоимость обучения</h2>
+      <p>Стоимость за полгода (2 сессии): <strong>8–10 тыс. ₽</strong> (уточняется).<br>Полная стоимость за 2,5 года: ~<strong>50 тыс. ₽</strong>.</p>
+    </section>
+
+    <section data-aos="fade-left">
+      <h2>Старт обучения</h2>
+      <p><strong>Первая сессия:</strong> 16–17 января 2025<br><strong>Локация:</strong> уточняется к началу обучения</p>
+    </section>
+
+    <section data-aos="fade-right">
+      <h2>Контакты</h2>
+      <div class="contact-card">
+        <div class="contact-info">
+          <div class="contact-name">Михаил Бердышев</div>
+          <p><i class="fa-solid fa-phone"></i><a href="tel:+79617616199"> +7 (961) 761-61-99</a></p>
+          <p><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/mberdyshev" target="_blank">@mberdyshev</a></p>
+          <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/+79617616199" target="_blank">Написать</a></p>
+        </div>
+      </div>
+    </section>
+
+     <section data-aos="fade-left">
+      <h2>Частые вопросы</h2>
+      <button class="accordion-toggle">Сколько стоит обучение? <span class="arrow"></span></button>
+      <div class="accordion-content"><p>Ориентировочно 8–10 тыс. ₽ за полгода. Полная сумма за 2,5 года составит около 50 тыс. ₽.</p></div>
+
+      <button class="accordion-toggle">Какие документы нужны? <span class="arrow"></span></button>
+      <div class="accordion-content"><p>Аттестат (9 классов), рекомендация от пастора, заявление (заполняется на первой сессии).</p></div>
+
+      <button class="accordion-toggle">Как проходит заочная часть? <span class="arrow"></span></button>
+      <div class="accordion-content"><p>Студенты получают материалы для чтения, видеолекции и проходят тесты в качестве экзаменов.</p></div>
+    </section>
+
+    <section id="docs" data-aos="fade-right">
+      <h2>Документы</h2>
+
+      <button class="accordion-toggle">
+        1. Устав и Лицензия на осуществление образовательной деятельности
+        <span class="arrow"></span>
+      </button>
+      <div class="accordion-content">
+        <p>Лицензия на осуществление образовательной деятельности № Л035-00115-77/00648201 от 26 января 2018 г.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:15px;">
+          <img src="img/licenses/Лицензия-ЗТИ-1-2018-211x300.jpg" data-full="img/licenses/Лицензия-ЗТИ-1-2018-719x1024.jpg" alt="Лицензия 1">
+          <img src="img/licenses/Лицензия-ЗТИ-2-2018-210x300.jpg" data-full="img/licenses/Лицензия-ЗТИ-2-2018-716x1024.jpg" alt="Лицензия 2">
+          <img src="img/licenses/Приложение-к-лицензии-212x300.jpg" data-full="img/licenses/Приложение-к-лицензии-722x1024.jpg" alt="Приложение">
+        </div>
+      </div>
+
+      <button class="accordion-toggle">
+        2. Свидетельство о государственной аккредитации
+        <span class="arrow"></span>
+      </button>
+      <div class="accordion-content">
+        <p>Свидетельство о государственной аккредитации отсутствует, так как институт не реализует программы, подлежащие государственной аккредитации.</p>
+      </div>
+
+      <button class="accordion-toggle">
+        3. Правила приема на обучение
+        <span class="arrow"></span>
+      </button>
+      <div class="accordion-content">
+        <p><a href="https://disk.yandex.com/i/hgmWv0RqvDQjOg" target="_blank">Правила приема на обучение в Заочный теологический институт</a></p>
+      </div>
+
+      <button class="accordion-toggle">
+        4–12. Прочие документы
+        <span class="arrow"></span>
+      </button>
+       <div class="accordion-content">
+      <p><a href="https://disk.yandex.ru/i/Qlmy4KxsnXUsHQ" target="_blank">Положение о режиме занятий обучающихся</a></p>
+      <p><a href="https://disk.yandex.ru/i/jvz9jmYNkFj0ww" target="_blank">Режим занятий обучающихся</a></p>
+      <p><a href="https://yadi.sk/i/QYp96ibZcFnang" target="_blank">Положение о порядке текущего контроля успеваемости и промежуточной аттестации</a></p>
+      <p><a href="https://disk.yandex.ru/i/hHA9iJq8V-gJ6w" target="_blank">Положение о порядке оформления возникновения, приостановления и прекращения отношений</a></p>
+      <p><a href="https://disk.yandex.ru/i/Cp8tXAFlHBrVlQ" target="_blank">Положение о порядке отчисления</a></p>
+      <p><a href="https://disk.yandex.ru/i/v9xiyFZfZlcC3Q" target="_blank">Положение о порядке и условиях перевода и восстановления</a></p>
+      <p><a href="https://disk.yandex.ru/i/AcHKIoI3465czw" target="_blank">Правила внутреннего распорядка обучающихся</a></p>
+      <p><a href="https://yadi.sk/i/jYDw7J1WxvGwVA" target="_blank">Правила внутреннего трудового распорядка</a></p>
+      <p>Коллективный договор: отсутствует</p>
+      <p><strong>Отчеты о самообследовании:</strong></p>
+      <ul>
+        <li><a href="https://disk.yandex.ru/i/JzuWBcY8TwcABw" target="_blank">за 2024 год</a></li>
+      </ul>
+      <p><strong>Предписания и отчеты:</strong> отсутствуют</p>
+    </div>
+    </section>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox-doc">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="Просмотр документа">
+  </div>
+
+  <footer>
+    © Московский теологический институт — Екатеринбург, 2025
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+
+    // Аккордеоны
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('open');
+        const content = button.nextElementSibling;
+        content.classList.toggle('open');
+      });
+    });
+
+    // Лайтбокс для всех изображений внутри аккордеонов
+    const lightboxDoc = document.getElementById('lightbox-doc');
+    const lightboxImgDoc = lightboxDoc.querySelector('img');
+    const closeBtnDoc = lightboxDoc.querySelector('.lightbox-close');
+
+    document.querySelectorAll('.accordion-content img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxDoc.classList.add('active');
+        lightboxImgDoc.src = img.dataset.full || img.src;
+      });
+    });
+
+    closeBtnDoc.addEventListener('click', () => lightboxDoc.classList.remove('active'));
+    lightboxDoc.addEventListener('click', e => { if(e.target === lightboxDoc) lightboxDoc.classList.remove('active'); });
+  </script>
+</body>
+</html>
