@@ -11,12 +11,22 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { overflow-x: hidden; }
     body {
-      font-family: 'Inter', sans-serif;
-      color: #1f2937;
-      line-height: 1.6;
-      background: url('img/textured_background_3.jpg') no-repeat center bottom fixed;
-      background-size: cover;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+    background: url('img/textured_background_3.jpg') no-repeat center bottom fixed;
+    background-size: cover;
     }
+
+    /* Для мобильных */
+    @media (max-width: 768px) {
+    body {
+    background: url('img/textured_background_3_mobile.jpg') no-repeat center bottom;
+    background-size: contain;       
+    background-attachment: scroll; 
+    }
+    }
+
 
     header {
       background: radial-gradient(ellipse at top left, #0b5ed7 0%, #003f9e 60%, #001e4d 100%);
