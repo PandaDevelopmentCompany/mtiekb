@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МТИ Екатеринбург — духовное образование для христиан</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<style>
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1a1a1a; background: #fdfdfd; overflow-x: hidden; }
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #2c3e50; }
+header p { font-size: 1.1rem; color: #555; }
+
+/* Container */
+.container { max-width: 1024px; margin: 2rem auto; padding: 0 1rem; }
+
+/* Sections */
+section { background: #ffffff; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+h2 { font-size: 1.8rem; color: #2c3e50; margin-bottom: 1rem; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { background: #f9f9f9; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; align-items: center; font-weight: 500; }
+.card i { font-size: 1.2rem; margin-right: 0.8rem; color: #3498db; }
+
+/* Accordion */
+.accordion-toggle {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem; font-weight: 600; font-size: 1rem; cursor: pointer;
+  background: #3498db; color: #fff; border-radius: 8px; border: none; margin-top: 1rem;
+}
+.accordion-toggle .arrow {
+  border-right: 2px solid #fff; border-bottom: 2px solid #fff; width: 7px; height: 7px; transform: rotate(45deg); transition: 0.3s;
+}
+.accordion-toggle.open .arrow { transform: rotate(-135deg); }
+
+.accordion-content { max-height: 0; overflow: hidden; transition: 0.5s; margin-top: 0.5rem; padding: 0 0; }
+.accordion-content.open { max-height: 2000px; padding-top: 1rem; }
+
+.author-photo img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-right: 1.5rem; }
+.author-details { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* Lists */
+ul { padding-left: 1.5rem; list-style-type: disc; }
+
+/* Footer */
+footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #888; }
+
+/* Lightbox */
+.lightbox { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; opacity:0; visibility:hidden; transition: 0.3s; z-index:9999; }
+.lightbox.active { opacity:1; visibility:visible; }
+.lightbox img { max-width:90%; max-height:90%; border-radius:8px; }
+.lightbox-close { position:absolute; top:20px; right:30px; font-size:28px; color:#fff; cursor:pointer; }
+
+/* Responsive */
+@media (max-width: 600px){
+  header h1 { font-size: 1.8rem; }
+  header p { font-size: 0.95rem; }
+  .author-photo img { margin: 0 auto 1rem; }
+  .author-details { width: 100%; text-align: center; }
+  .cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header data-aos="fade-down">
+  <h1>МТИ Екатеринбург</h1>
+  <p>Духовное образование для христиан в Екатеринбурге</p>
+</header>
+
+<div class="container">
+
+  <section data-aos="fade-right">
+    <h2>О программе</h2>
+    <p>Московский теологический институт (РЦ ХВЕ) в Екатеринбурге приглашает на обучение для получения среднего образования. Обучение совмещает дистанционные курсы и очные сессии.</p>
+  </section>
+
+  <section id="founder" class="accordion" data-aos="fade-left">
+    <button class="accordion-toggle">Ректор МТИ <span class="arrow"></span></button>
+    <div class="accordion-content" style="display:flex; flex-wrap:wrap; align-items:center;">
+      <div class="author-photo"><img src="img/S_Yastr.jpg" alt="Сергей Ястржембский"></div>
+      <div class="author-details">
+        <h2>Сергей Ястржембский</h2>
+        <p>— Ректор МТИ. Для нас большая честь служить вам на протяжении более 20 лет...</p>
+        <p>Каждый год, каждый день очень важен и ценен...</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>Как проходит обучение</h2>
+    <div class="cards">
+      <div class="card"><i class="fa-solid fa-book"></i>Материалы: чтение, видео и тесты</div>
+      <div class="card"><i class="fa-solid fa-users"></i>Очные сессии: раз в квартал</div>
+      <div class="card"><i class="fa-solid fa-graduation-cap"></i>Срок обучения: 2,5 года</div>
+    </div>
+  </section>
+
+  <section data-aos="fade-left">
+    <h2>Условия поступления</h2>
+    <ul>
+      <li>Аттестат (9 классов)</li>
+      <li>Рекомендация от пастора</li>
+      <li>Заявление (оформляется на первой сессии)</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>Стоимость обучения</h2>
+    <p>Стоимость за полгода (2 сессии): <strong>8–10 тыс. ₽</strong>.<br>Полная стоимость за 2,5 года: ~<strong>50 тыс. ₽</strong>.</p>
+  </section>
+
+  <section data-aos="fade-left">
+    <h2>Старт обучения</h2>
+    <p><strong>Первая сессия:</strong> 16–17 января 2025<br><strong>Локация:</strong> уточняется</p>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>Контакты</h2>
+    <div class="contact-card">
+      <p><i class="fa-solid fa-phone"></i><a href="tel:+79617616199"> +7 (961) 761-61-99</a></p>
+      <p><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/mberdyshev" target="_blank">@mberdyshev</a></p>
+      <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/+79617616199" target="_blank">Написать</a></p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox-doc">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Просмотр документа">
+</div>
+
+<footer>© Московский теологический институт — Екатеринбург, 2025</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+
+// Аккордеоны
+document.querySelectorAll('.accordion-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    btn.nextElementSibling.classList.toggle('open');
+  });
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox-doc');
+const lightboxImg = lightbox.querySelector('img');
+const closeBtn = lightbox.querySelector('.lightbox-close');
+
+document.querySelectorAll('.accordion-content img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.classList.add('active');
+    lightboxImg.src = img.dataset.full || img.src;
+  });
+});
+
+closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+lightbox.addEventListener('click', e => { if(e.target === lightbox) lightbox.classList.remove('active'); });
+</script>
+
+</body>
+</html>
