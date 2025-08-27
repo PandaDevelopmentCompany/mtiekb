@@ -10,15 +10,13 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { overflow-x: hidden; }
-   body {
-  font-family: 'Inter', sans-serif;
-  color: #1f2937;
-  line-height: 1.6;
-  background: url('img/textured_background_3.jpg') no-repeat center bottom;
-  background-size: cover;
-  background-attachment: fixed; /* работает на десктопах */
-}
-
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+      line-height: 1.6;
+      background: url('img/textured_background_3.jpg') no-repeat center bottom fixed;
+      background-size: cover;
+    }
 
     header {
       background: radial-gradient(ellipse at top left, #0b5ed7 0%, #003f9e 60%, #001e4d 100%);
@@ -376,7 +374,7 @@
     const lightboxDoc = document.getElementById('lightbox-doc');
     const lightboxImgDoc = lightboxDoc.querySelector('img');
     const closeBtnDoc = lightboxDoc.querySelector('.lightbox-close');
- 
+
     document.querySelectorAll('.accordion-content img').forEach(img => {
       img.addEventListener('click', () => {
         lightboxDoc.classList.add('active');
@@ -387,19 +385,5 @@
     closeBtnDoc.addEventListener('click', () => lightboxDoc.classList.remove('active'));
     lightboxDoc.addEventListener('click', e => { if(e.target === lightboxDoc) lightboxDoc.classList.remove('active'); });
   </script>
-
-  <script>
-  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
-    // убираем fixed на мобилках
-    document.body.style.backgroundAttachment = "scroll";
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      // имитируем "fixed": чем меньше коэффициент, тем медленнее фон двигается
-      document.body.style.backgroundPosition = `center ${-scrollY * 0.3}px`;
-    });
-  }
-</script>
-
 </body>
 </html>
