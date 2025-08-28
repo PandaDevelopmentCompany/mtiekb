@@ -101,6 +101,7 @@ header {
         cursor: pointer;
         margin-top: 1rem;
         text-align: left;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .accordion-toggle .arrow {
         border-right: 2px solid white;
@@ -932,3 +933,47 @@ label#check input[type="checkbox"] {
   padding: 20px 0px !important;
 }
 
+#founder {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+@media scree and (max-width: 768px){
+#founder .accordion-content {
+  flex-direction: column !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* aaa */
