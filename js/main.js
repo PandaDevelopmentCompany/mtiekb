@@ -81,8 +81,26 @@ let openPopupButtons_mti = document.querySelectorAll('.open-popup_mti');
 let closePopupButton_mti = document.querySelector('.close-popup_mti');
 let closePopupButtonSubmit_mti = document.querySelector('.close_through_submit_mti');
 
-function lockScroll() { document.documentElement.classList.add('lock-scroll'); document.body.classList.add('lock-scroll'); }
-function unlockScroll() { document.documentElement.classList.remove('lock-scroll'); document.body.classList.remove('lock-scroll'); }
+let scrollPosition = 0;
+
+function lockScroll() {
+  scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%'; // чтобы не прыгала ширина
+}
+
+function unlockScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollPosition);
+}
+
 
 openPopupButtons_mti.forEach(button => button.addEventListener('click', e => {
     e.preventDefault();

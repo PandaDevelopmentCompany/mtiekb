@@ -571,12 +571,12 @@ div.privacy_policy {
   cursor: pointer;
 }
 
-html.lock-scroll,
+/*html.lock-scroll,
 body.lock-scroll {
   overflow: hidden;
   height: 100%;
   touch-action: none;
-}
+}*/
 
 
 /* Стили для уведомления (pop-up) */
@@ -948,23 +948,34 @@ label#check input[type="checkbox"] {
 
 
 
+.sub-accordion-content ol li {
+  list-style: disc;
+}
 
 
 
 
 
+.button_mti {
+  background: linear-gradient(135deg, #d73b3b, #b92f2f);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  margin-top: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(215, 59, 59, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.button_mti:hover {
+  background: linear-gradient(135deg, #b92f2f, #8b1a1a);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(215, 59, 59, 0.5);
+}
 
 
 
