@@ -284,7 +284,7 @@ header {
   position: fixed;
   top: 50%;
   right: 0;
-  transform: translateY(-20%);
+  transform: translateY(-60%);
   background: #d73b3b;
   color: white;
   padding: 12px 8px;
@@ -301,7 +301,7 @@ header {
 
 .apply-button:hover {
   background: #a80000;
-  transform: translateY(-20%) scale(1.02);
+  transform: translateY(-60%) scale(1.02);
 }
 
 
