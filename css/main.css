@@ -631,12 +631,12 @@ body.lock-scroll {
   touch-action: none;
 }*/
 
-.lock-scroll {
+/*.lock-scroll {
     position: fixed;
     width: 100%;
     left: 0;
     right: 0;
-} 
+} */
 
 
 /* Стили для уведомления (pop-up) */
