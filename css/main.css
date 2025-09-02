@@ -383,7 +383,7 @@ header {
     background: rgba(0,0,0,0.8);
     width: 400px;
     padding: 25px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 5.3s ease, transform 0.3s ease;
     pointer-events: none;
 }
 
