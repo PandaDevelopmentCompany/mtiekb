@@ -357,17 +357,17 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%); /* чуть выше */
-    opacity: 0;
+    opacity: 0; /* полностью прозрачный */
     background: #000000c1;
     width: 400px;
     padding: 25px;
     transition: opacity 0.4s ease, transform 0.4s ease;
-    will-change: opacity, transform; /* оптимизация */
+    will-change: opacity, transform;
 }
 
 .popup_mti.active {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+    transform: translate(-50%, -50%); /* плавный сдвиг вниз */
+    opacity: 1; /* проявление */
 }
 
 
