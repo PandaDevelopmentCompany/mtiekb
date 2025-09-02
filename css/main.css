@@ -316,7 +316,7 @@ header {
 /* ============== */
 /* popup_mti */
 /* ============== */
-/*.popup__bg_mti {
+.popup__bg_mti {
     position: fixed;
     top: 0;
     left: 0;
@@ -344,65 +344,13 @@ header {
     background: #000000c1;
     width: 400px;
     padding: 25px;
-    transition: 0.5s all;
+    transition: 5.5s all;
 }
 
 .popup_mti.active { 
     transform: translate(-50%, -50%) scale(1) !important; 
     transition: 0.5s all;
-}*/
-
-
-/* фон попапа */
-.popup__bg_mti {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(35, 59, 71, 0.7);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 99999;
-    backdrop-filter: none; /* отключаем blur для слабых устройств */
 }
-
-.popup__bg_mti.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-/* форма */
-.popup_mti {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    background: rgba(0,0,0,0.8);
-    width: 400px;
-    padding: 25px;
-    transition: opacity 5.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-
-.popup_mti.active {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    pointer-events: all;
-}
-
-@media (max-width: 768px) {
-  .popup_mti {
-    transform: translate(-50%, -50%); /* убрали scale */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  .popup__bg_mti {
-    backdrop-filter: none; /* убрали blur */
-  }
-}
-
 
 
 @media screen and (max-width: 470px) {
@@ -630,13 +578,6 @@ body.lock-scroll {
   height: 100%;
   touch-action: none;
 }*/
-
-/*.lock-scroll {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-} */
 
 
 /* Стили для уведомления (pop-up) */
