@@ -327,9 +327,7 @@ header {
     pointer-events: none; 
     transition: 0.5s all;
     z-index: 99999;
-/*    backdrop-filter: blur(4px);*/
-    background: rgba(35, 59, 71, 0.75);
-    will-change: opacity;
+    backdrop-filter: blur(4px);
 }
 
 .popup__bg_mti.active { 
@@ -338,7 +336,7 @@ header {
     transition: 0.5s all;
 }
 
-.popup_mti {
+/*.popup_mti {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -350,9 +348,27 @@ header {
 }
 
 .popup_mti.active { 
-    transform: translate(-50%, -50%) scale(1); 
+    transform: translate(-50%, -50%) scale(1) !important; 
     transition: 0.5s all;
+}*/
+.popup_mti {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%); /* чуть выше */
+    opacity: 0;
+    background: #000000c1;
+    width: 400px;
+    padding: 25px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    will-change: opacity, transform; /* оптимизация */
 }
+
+.popup_mti.active {
+    transform: translate(-50%, -50%); /* плавный сдвиг вниз */
+    opacity: 1; /* проявление */
+}
+
 
 @media screen and (max-width: 470px) {
   .popup_mti.active {
