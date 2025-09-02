@@ -1027,4 +1027,27 @@ label#check input[type="checkbox"] {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+button, a, .accordion-toggle, .open-popup_mti {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+
+
 /* aaa */
