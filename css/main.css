@@ -23,10 +23,23 @@
     }
     }
 
-header {
+/*header {
     background: radial-gradient(ellipse at top left, #d73b3b 0%, #9e0000 60%, #4d0000 100%);
     color: white;
     padding: 4rem 1rem 3rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border-bottom-left-radius: 20%;
+    position: relative;
+    overflow: hidden;
+}*/
+
+  header {
+    background: 
+    linear-gradient(rgba(215, 59, 59, 0.8), rgba(77, 0, 0, 0.85)), 
+    url('../img/header_background.jpg') center/cover no-repeat;
+    color: white;
+    padding: 7rem 1rem 7rem; /* увеличил высоту */
     text-align: center;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     border-bottom-left-radius: 20%;
@@ -38,7 +51,8 @@ header {
         font-size: 2.8rem;
         font-weight: 800;
         margin-bottom: 1rem;
-        background: linear-gradient(to right, #fff, #ffb3b3);
+/*        background: linear-gradient(to right, #fff, #ffb3b3);*/
+      background: linear-gradient(to right, #fff, #fff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -199,7 +213,7 @@ header {
 
   
   /* Остальные элементы */
-  header { padding: 3rem 1rem 2rem; }
+  header { padding: 5rem 1rem 5rem; }
   .author-details { font-size: 0.9rem; }
 }
 
@@ -361,7 +375,7 @@ header {
     background: #000000c1;
     width: 400px;
     padding: 25px;
-    transition: opacity 2.4s ease, transform 0.4s ease;
+    transition: opacity 1.4s ease, transform 0.4s ease;
     will-change: opacity, transform;
 }
 
