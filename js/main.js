@@ -84,22 +84,17 @@ let closePopupButtonSubmit_mti = document.querySelector('.close_through_submit_m
 let scrollPosition = 0;
 
 function lockScroll() {
-  scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollPosition}px`;
-  document.body.style.left = '0';
-  document.body.style.right = '0';
-  document.body.style.width = '100%'; // чтобы не прыгала ширина
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.classList.add('lock-scroll');
+    document.body.style.top = `-${scrollPosition}px`;
 }
 
 function unlockScroll() {
-  document.body.style.position = '';
-  document.body.style.top = '';
-  document.body.style.left = '';
-  document.body.style.right = '';
-  document.body.style.width = '';
-  window.scrollTo(0, scrollPosition);
+    document.body.classList.remove('lock-scroll');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
 }
+
 
 
 openPopupButtons_mti.forEach(button => button.addEventListener('click', e => {
