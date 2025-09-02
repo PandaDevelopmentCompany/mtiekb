@@ -393,6 +393,17 @@ header {
     pointer-events: all;
 }
 
+@media (max-width: 768px) {
+  .popup_mti {
+    transform: translate(-50%, -50%); /* убрали scale */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .popup__bg_mti {
+    backdrop-filter: none; /* убрали blur */
+  }
+}
+
+
 
 @media screen and (max-width: 470px) {
   .popup_mti.active {
