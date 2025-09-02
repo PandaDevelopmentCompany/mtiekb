@@ -84,12 +84,14 @@ let closePopupButtonSubmit_mti = document.querySelector('.close_through_submit_m
 let scrollPosition = 0;
 
 function lockScroll() {
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    scrollPosition = window.scrollY;
+    document.documentElement.classList.add('lock-scroll');
     document.body.classList.add('lock-scroll');
     document.body.style.top = `-${scrollPosition}px`;
 }
 
 function unlockScroll() {
+    document.documentElement.classList.remove('lock-scroll');
     document.body.classList.remove('lock-scroll');
     document.body.style.top = '';
     window.scrollTo(0, scrollPosition);

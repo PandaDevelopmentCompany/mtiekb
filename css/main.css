@@ -604,11 +604,18 @@ div.privacy_policy {
   cursor: pointer;
 }
 
-html.lock-scroll,
+/*html.lock-scroll,
 body.lock-scroll {
   overflow: hidden;
   height: 100%;
   touch-action: none;
+}*/
+
+html.lock-scroll,
+body.lock-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
 }
 
 
