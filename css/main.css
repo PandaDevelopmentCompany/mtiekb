@@ -327,7 +327,7 @@ header {
     pointer-events: none; 
     transition: 0.5s all;
     z-index: 99999;
-    backdrop-filter: blur(4px);
+/*    backdrop-filter: blur(4px);*/
     background: rgba(35, 59, 71, 0.75);
     will-change: opacity;
 }
