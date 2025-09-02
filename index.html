@@ -440,5 +440,19 @@
 <script src="js/jquery-371min.js"></script>
 <script src="js/jquerymaskedinputmin.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    // отключаем AOS на слабых устройствах
+    disable: function () {
+      const isMobile = window.innerWidth < 768;
+      const isLowPerf = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i);
+
+      return isMobile || isLowPerf;
+    }
+  });
+</script>
+
 </body>
 </html>

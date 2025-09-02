@@ -351,6 +351,7 @@ header {
     transform: translate(-50%, -50%) scale(1) !important; 
     transition: 0.5s all;
 }*/
+
 .popup_mti {
     position: absolute;
     top: 50%;
@@ -365,8 +366,8 @@ header {
 }
 
 .popup_mti.active {
-    transform: translate(-50%, -50%); /* плавный сдвиг вниз */
-    opacity: 1; /* проявление */
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 
