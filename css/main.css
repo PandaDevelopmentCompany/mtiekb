@@ -48,7 +48,7 @@
 }
     
     header h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 1rem;
 /*        background: linear-gradient(to right, #fff, #ffb3b3);*/
@@ -62,7 +62,7 @@
     }
 
     @media (max-width: 600px) {
-        header h1 { font-size: 2rem; }
+        header h1 { font-size: 1.5rem; }
         header p { font-size: 1rem; }
         header { padding: 3rem 1rem 2rem; }
     }
@@ -187,8 +187,7 @@
 
 
    @media (max-width: 600px) {
-  /* Заголовки и тексты */
-  h1 { font-size: 2rem; }       /* было 2.8rem */
+/*  h1 { font-size: 2rem; }*/
   h2 { font-size: 1.4rem; }     /* было 1.7rem */
   p { font-size: 0.9rem; }      /* было 1.2rem */
   
