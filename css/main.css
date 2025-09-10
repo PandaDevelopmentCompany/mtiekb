@@ -1025,6 +1025,14 @@ label#check input[type="checkbox"] {
 
 
 
+@media screen and (max-width: 768px) {
+  .button_mti {
+    font-size: 13px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+}
 
 
 
