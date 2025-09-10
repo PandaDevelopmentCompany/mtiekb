@@ -249,10 +249,12 @@
   justify-content: center;
   transition: background 0.3s ease;
 }
-
+@media screen and (min-width: 769px) {
 .chat-toggle:hover {
   background: #a80000;
+}  
 }
+
 
 .chat-contacts {
   display: flex;
@@ -1010,11 +1012,14 @@ label#check input[type="checkbox"] {
   transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button_mti:hover {
+@media screen and (min-width: 769px) {
+  .button_mti:hover {
   background: linear-gradient(135deg, #b92f2f, #8b1a1a);
-  transform: scale(1.05);
+  transform: scale(1.01);
   box-shadow: 0 6px 16px rgba(215, 59, 59, 0.5);
 }
+}
+
 
 
 
@@ -1032,6 +1037,7 @@ label#check input[type="checkbox"] {
     border-radius: 20px;
     letter-spacing: 0.5px;
   }
+
 }
 
 

@@ -255,6 +255,18 @@
 
 
 
+      <button class="accordion-toggle">
+      Будет ли у меня студенческий билет? <span class="arrow"></span>
+    </button>
+    <div class="accordion-content">
+      <p>
+        Да, такая возможность имеется. После официального приказа ректора о зачислении студентов новой группы всем желающим предоставляется возможность запросить и оформить студенческий билет.
+      </p>
+    </div>
+
+
+
+
 
       <button class="accordion-toggle">
         Имеет ли институт лицензию на обучение?
@@ -446,25 +458,6 @@
 <!-- Вертикальная кнопка "Подать заявку" -->
 <a href="#contact-form" class="apply-button open-popup_mti">Подать заявку</a>
 
-
-<script>
-  // кнопки залипают на hover на мобилках
-  // Селекторы кнопок, у которых есть hover на десктопе
-const buttons = document.querySelectorAll('.apply-button, .button_mti, .charge-button, .back-button, .submit-btn, .chat-toggle');
-
-// На мобильных устройствах
-buttons.forEach(button => {
-  button.addEventListener('touchstart', () => {
-    // Форсируем сброс hover / анимации
-    button.classList.add('is-touched');
-    // Через небольшую задержку убираем класс
-    setTimeout(() => {
-      button.classList.remove('is-touched');
-    }, 100); // 100ms — достаточно для отклика
-  });
-});
-
-</script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
