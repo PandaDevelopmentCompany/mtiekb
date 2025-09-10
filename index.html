@@ -449,12 +449,21 @@
 
 <script>
   // кнопки залипают на hover на мобилках
-  document.querySelectorAll("a, button").forEach(el => {
-  el.addEventListener("click", () => {
-    // снимаем фокус, если браузер его повесил
-    el.blur();
+  // Селекторы кнопок, у которых есть hover на десктопе
+const buttons = document.querySelectorAll('.apply-button, .button_mti, .charge-button, .back-button, .submit-btn, .chat-toggle');
+
+// На мобильных устройствах
+buttons.forEach(button => {
+  button.addEventListener('touchstart', () => {
+    // Форсируем сброс hover / анимации
+    button.classList.add('is-touched');
+    // Через небольшую задержку убираем класс
+    setTimeout(() => {
+      button.classList.remove('is-touched');
+    }, 100); // 100ms — достаточно для отклика
   });
 });
+
 </script>
 
 

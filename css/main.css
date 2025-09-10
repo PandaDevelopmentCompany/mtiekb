@@ -1056,13 +1056,24 @@ button, a, .accordion-toggle, .open-popup_mti {
 
 
 
-.apply-button:active,
-.button_mti:active,
-.charge-button:active {
-  transform: translateY(-60%) scale(1); /* возвращаем твой изначальный transform */
-  filter: brightness(0.9); /* лёгкое затемнение при тапе */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
