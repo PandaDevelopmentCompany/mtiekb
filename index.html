@@ -447,6 +447,16 @@
 <a href="#contact-form" class="apply-button open-popup_mti">Подать заявку</a>
 
 
+<script>
+  // кнопки залипают на hover на мобилках
+  document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("click", () => {
+    // снимаем фокус, если браузер его повесил
+    el.blur();
+  });
+});
+</script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="js/jquery-371min.js"></script>
