@@ -14,37 +14,39 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     };
 
     // --- Отправка в Telegram ---
-    const telegramBotToken = '8336719253:AAESZ3wUiHBU3kLmPMwpJtfZeungVOEkMh4';
-    const telegramChatIds = ['-1003073647900'];
+    // const telegramBotToken = '8336719253:AAESZ3wUiHBU3kLmPMwpJtfZeungVOEkMh4';
+    // const telegramChatIds = ['-1003073647900'];
 
-    let message = `<b>📥 Новая заявка</b>%0A`;
-    message += `<b>Имя:</b> ${formData.firstName}%0A`;
-    message += `<b>Фамилия:</b> ${formData.lastName}%0A`;
-    message += `<b>Телефон:</b> ${formData.phone}%0A`;
-    message += `<b>Город:</b> ${formData.city}%0A`;
-    message += `<b>Церковь:</b> ${formData.church || '—'}%0A`;
-    message += `<b>Согласие:</b> ${formData.consent}%0A`;
+    // let message = `<b>📥 Новая заявка</b>%0A`;
+    // message += `<b>Имя:</b> ${formData.firstName}%0A`;
+    // message += `<b>Фамилия:</b> ${formData.lastName}%0A`;
+    // message += `<b>Телефон:</b> ${formData.phone}%0A`;
+    // message += `<b>Город:</b> ${formData.city}%0A`;
+    // message += `<b>Церковь:</b> ${formData.church || '—'}%0A`;
+    // message += `<b>Согласие:</b> ${formData.consent}%0A`;
 
-    let sendCount = 0, errorCount = 0;
+    // let sendCount = 0, errorCount = 0;
 
-    telegramChatIds.forEach(chatId => {
-        fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${message}`)
-            .then(response => {
-                if (!response.ok) errorCount++;
-                else sendCount++;
-                if (sendCount + errorCount === telegramChatIds.length) finalizeFormSubmit(errorCount === 0);
-            })
-            .catch(() => {
-                errorCount++;
-                if (sendCount + errorCount === telegramChatIds.length) finalizeFormSubmit(false);
-            });
-    });
+    // telegramChatIds.forEach(chatId => {
+    //     fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${message}`)
+    //         .then(response => {
+    //             if (!response.ok) errorCount++;
+    //             else sendCount++;
+    //             if (sendCount + errorCount === telegramChatIds.length) finalizeFormSubmit(errorCount === 0);
+    //         })
+    //         .catch(() => {
+    //             errorCount++;
+    //             if (sendCount + errorCount === telegramChatIds.length) finalizeFormSubmit(false);
+    //         });
+    // });
 
     // --- Отправка в Google Apps Script ---
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQyZgPZF_-mGCbH7-IFw2BlURExh6v3txMZialuwRzL_-WwR9Hwa_PDZe3jxbZytRELg/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw5JsW-0EUbNhNwlwiDU1XN0IB5JFILwdwFFCS0MPe3knFw9dPDWLB7YxyHzCDA_0XKLQ/exec';
     fetch(scriptURL, { method: 'POST', body: JSON.stringify(formData) })
         .then(response => response.text())
         .catch(error => console.error('Ошибка Google Script:', error));
+
+        finalizeFormSubmit(true);
 });
 
 // ========================
