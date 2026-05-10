@@ -357,43 +357,43 @@
 
 
 <!-- Форма заявки -->
-<div class="popup__bg_mti">
+<!-- <div class="popup__bg_mti">
   <form action="#" class="popup_mti scrollable-form" id="contactForm" name="submit-to-google-sheet">
     <h4 style="color: white;">Подать заявку</h4>
 
     <img src="img/close.svg" class="close-popup_mti" alt="Закрыть">
 
-    <!-- First Name -->
+
     <label>
       <input id="firstName" type="text" name="first-name" required />
       <div class="label__text">Ваше имя *</div>
     </label>
 
-    <!-- Last Name -->
+
     <label>
       <input id="lastName" type="text" name="last-name" required />
       <div class="label__text">Ваша фамилия *</div>
     </label>
 
-    <!-- Phone -->
+
     <label>
       <input id="phone" type="tel" name="phone" required />
       <div class="label__text">Номер телефона *</div>
     </label>
 
-    <!-- City -->
+
     <label>
       <input id="city" type="text" name="city" required />
       <div class="label__text">Город проживания *</div>
     </label>
 
-    <!-- Church -->
+
     <label>
       <input id="church" type="text" name="church" required />
       <div class="label__text">Церковь (название) *</div>
     </label>
 
-    <!-- Consent -->
+
    <label id="check" class="checkbox-label">
   <input type="checkbox" name="consent" required />
   <span>Я соглашаюсь на обработку персональных данных *</span>
@@ -405,11 +405,27 @@
   <a href="privacy.html" target="_blank"><u>Политикой конфиденциальности</u></a>
 </div>
 
-<!-- Кнопка отправки -->
+
 <button type="submit" id="sendButton_mti" class="submit-btn">
   ОТПРАВИТЬ
 </button>
   </form>
+</div> -->
+
+<!-- Попап уведомления о закрытии приёма заявок -->
+<div class="popup__bg_mti">
+  <div class="popup_mti scrollable-form" id="contactForm">
+    <h4 style="color: white;">Приём заявок закрыт</h4>
+
+    <img src="img/close.svg" class="close-popup_mti" alt="Закрыть">
+
+    <p style="color:white; margin-top: 15px; line-height:1.5;">
+      К сожалению, приём заявок на текущий набор завершён.<br>
+      Следите за обновлениями на нашем сайте, чтобы подать заявку в следующем потоке.
+    </p>
+
+
+  </div>
 </div>
 
 
